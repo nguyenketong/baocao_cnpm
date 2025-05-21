@@ -1,50 +1,27 @@
 {
   "compilerOptions": {
-    "jsx": "preserve",
-    "module": "commonjs",
-    "declaration": true,
-    "removeComments": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "target": "ES2021",
-    "sourceMap": true,
-    "outDir": "./dist",
-    "baseUrl": "./",
-    "incremental": true,
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
     "skipLibCheck": true,
-    "strictNullChecks": true,
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitAny": false,
-    "strictBindCallApply": false,
-    "noFallthroughCasesInSwitch": false,
-    "esModuleInterop": true,
-    "allowJs": true, // Cho phép các file JavaScript trong dự án
-    "checkJs": false // Không kiểm tra JavaScript nếu bạn không cần
-    ,
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "strict": false,
+    "strict": true,
     "noEmit": true,
-    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
     "plugins": [
       {
         "name": "next"
       }
-    ]
+    ],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
-  "include": [
-    "src/**/*",
-    "src/copy-uploads.js" // Thêm file copy-uploads.js vào cấu hình
-    ,
-    ".next/types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
 }
