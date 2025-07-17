@@ -74,7 +74,7 @@ exports.AppModule = AppModule = __decorate([
                 rootPath: path.join(__dirname, '..', 'uploads'),
                 serveRoot: '/uploads',
             }),
-            mongoose_1.MongooseModule.forRoot('mongodb+srv://nguyenketong1603:ketong1603@tong.8zcrene.mongodb.net/?retryWrites=true&w=majority&appName=tong'),
+            mongoose_1.MongooseModule.forRoot(process.env.MONGO_URI ?? ''),
             database_module_1.DatabaseModule,
             departments_module_1.DepartmentModule,
             designations_module_1.DesignationModule,

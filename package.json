@@ -8,7 +8,7 @@
   "scripts": {
     "build": "nest build && npm run copy-uploads",
     "prestart:dev": "npm run copy-uploads",
-    "copy-uploads": "xcopy \"./uploads\" \"./dist/uploads\" /E /I /H /Y",
+    "copy-uploads": "cp -r ./uploads ./dist/uploads",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",

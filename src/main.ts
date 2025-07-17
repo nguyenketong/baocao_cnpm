@@ -42,7 +42,7 @@ async function bootstrap() {
   console.log('📂 Serving static files from: uploads');
 
   await app.listen(3000);
-  console.log('🚀 Server is running on http://localhost:3000');
+  console.log('🚀 Server is running on ${process.env.NEXT_PUBLIC_API}');
 }
 
 bootstrap();

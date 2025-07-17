@@ -30,7 +30,7 @@ import { DatabaseModule } from './config/database.module';
       rootPath: path.join(__dirname, '..', 'uploads'), // Đường dẫn tới thư mục uploads
       serveRoot: '/uploads', // URL cơ sở mà ứng dụng sẽ sử dụng để phục vụ file
     }),
-    MongooseModule.forRoot('mongodb+srv://nguyenketong1603:ketong1603@tong.8zcrene.mongodb.net/?retryWrites=true&w=majority&appName=tong'),
+    MongooseModule.forRoot(process.env.MONGO_URI ?? ''),
     DatabaseModule,
     DepartmentModule,
     DesignationModule,
