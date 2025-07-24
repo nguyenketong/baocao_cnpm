@@ -12,7 +12,6 @@ const useSubmitProgress = (onClose: () => void) => {
   const onSubmit = async (data: ProgressData, reset: () => void) =>  {
     if (isSubmitting) return;
     setIsSubmitting(true);
-
     try {
       const response = await axios.post(API_PROGRESS_URL, data);
 

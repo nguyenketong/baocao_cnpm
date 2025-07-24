@@ -13,7 +13,7 @@ export class DefaultEmployeeStrategy implements EmployeeStrategy {
 
 export class LeadEmployeeStrategy implements EmployeeStrategy {
   process(employee: Employee): string {
-    return `🚀 ${employee.designation_id?.designationName}`;
+    return `${employee.designation_id?.designationName}`;
   }
 }
 
