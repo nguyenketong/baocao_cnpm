@@ -33,8 +33,7 @@ export class DatabaseConnection {
             console.log(`🔌 Đang thử kết nối database (Lần thử ${this.connectionAttempts}/${this.MAX_RETRIES})`);
 
             const uri = this.configService.get<string>('MONGODB_URI') || 
-                'mongodb+srv://mongodb+srv://nguyenketong1603:ketong1603@tong.8zcrene.mongodb.net';
-            
+                'mongodb+srv://nguyenketong1603:ketong1603@tong.8zcrene.mongodb.net/';
             this.connection = await mongoose.connect(uri, {
                 retryWrites: true,
                 w: 'majority'

@@ -72,7 +72,7 @@ var DatabaseConnection = /** @class */ (function () {
                         this.connectionAttempts++;
                         console.log("\uD83D\uDD0C \u0110ang th\u1EED k\u1EBFt n\u1ED1i database (L\u1EA7n th\u1EED ".concat(this.connectionAttempts, "/").concat(this.MAX_RETRIES, ")"));
                         uri = this.configService.get('MONGODB_URI') ||
-                            'mongodb+srv://nguyenketong1603:ketong1603@tong.8zcrene.mongodb.net';
+                            'mongodb+srv://nguyenketong1603:ketong1603@tong.8zcrene.mongodb.net/';
                         _a = this;
                         return [4 /*yield*/, mongoose_1.default.connect(uri, {
                                 retryWrites: true,
